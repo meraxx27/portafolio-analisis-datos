@@ -26,3 +26,24 @@ Las visualizaciones generadas se guardaron en la carpeta `reports/`:
 - Python 3
 - Pandas & NumPy
 - Matplotlib & Seaborn
+
+---
+
+# Proyecto 2: Análisis de Series de Tiempo y Tendencias Temporales (2024 - 2025)
+
+## Resumen Ejecutivo
+Análisis de comportamiento temporal de ventas diarias a lo largo de dos años para la identificación de tendencias subyacentes, estacionalidad y tasas de crecimiento mes a mes (MoM).
+
+## Metodología y Herramientas Aplicadas
+- **Indexación Temporal:** Uso de `DatetimeIndex` en Pandas para manipulación nativa de fechas.
+- **Remuestreo (Resampling):** Agregación de métricas diarias a frecuencia mensual (`.resample('ME')`).
+- **Suavizado de Series:** Aplicación de medias móviles de 30 días (`.rolling(window=30)`) para aislar la tendencia global de la volatilidad diaria.
+- **Métricas Crecimiento:** Cálculo de porcentaje de variación Mes a Mes (`pct_change()`).
+
+## Hallazgos Clave (Key Insights)
+- **Tendencia Positiva:** Los ingresos diarios promedio crecieron de ~$1,000 al inicio de 2024 hasta superar los ~$3,400 hacia finales de 2025.
+- **Crecimiento Mensual:** Destacan picos de aceleración como en marzo de 2024 con un crecimiento MoM superior al +16%.
+
+## Archivos Generados
+- `proyecto_2/notebooks/02_series_de_tiempo.ipynb`
+- `proyecto_2/reports/tendencia_ventas_serie_tiempo.png`
